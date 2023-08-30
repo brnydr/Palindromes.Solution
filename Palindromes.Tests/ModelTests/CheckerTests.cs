@@ -17,10 +17,17 @@ namespace Palindromes.Tests
     }
 
     [TestMethod]
-    public void isPalindrome_ReturnsTrueIfPalindrome_Bool()
+    public void isPalindrome_ReturnsTrueWhenInvoked_String()
     {
       Checker newChecker = new Checker("radio");
-      Assert.AreEqual(true, newChecker.IsPalindrome());
+      Assert.AreEqual("this is not a palindrome", newChecker.IsPalindrome());
+    }
+
+    [TestMethod]
+    public void isPalidrome_RetrunsTrueWhenPalidrome_String()
+    {
+      Checker newChecker = new Checker("maam");
+      Assert.AreEqual("this is a palindrome", newChecker.IsPalindrome());
     }
   }
 }
